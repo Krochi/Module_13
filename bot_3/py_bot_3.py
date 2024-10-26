@@ -46,7 +46,7 @@ from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters.state import State, StatesGroup
 
-api = ""
+api = "7541933458:AAHNNAV6eMyPqgURIy6KSk077JrJCfehiZc"
 bot = Bot(token=api)
 dp = Dispatcher(bot, storage=MemoryStorage())
 
@@ -89,8 +89,8 @@ async def send_calories(message: types.Message, state: FSMContext):
     growth = data['growth']
     weight = data['weight']
 
-    bmr = 10 * weight + 6.25 * growth - 5 * age - 161
-    await message.answer(f'Ваша норма калорий: {bmr:.2f} ккал/день')
+    form = 10 * weight + 6.25 * growth - 5 * age - 161
+    await message.answer(f'Ваша норма калорий: {form:.2f} ккал/день')
     await state.finish()
 
 
