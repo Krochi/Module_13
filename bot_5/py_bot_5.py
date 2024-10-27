@@ -71,7 +71,7 @@ async def main_menu(message: types.Message):
 
 @dp.callback_query_handler(lambda call: call.data == 'formulas')
 async def get_formulas(call: types.CallbackQuery):
-    formula_text = "Формула Миффлина-Сан Жеора для мужчин: 10 * вес (кг) + 6.25 * рост (см) - 5 * возраст + 5"
+    formula_text = "Формула Миффлина-Сан Жеора для мужчин"
     await call.message.answer(formula_text)
 
 
